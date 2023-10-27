@@ -1,0 +1,174 @@
+/* CSS MAIN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid.submenuContainer {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  color: white;
+  background-color: rgba(80, 34, 116, 0.7333333333);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link.active.submenu {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 30px;
+}
+.nav-link.active.submenu:hover, .nav-link.active.submenu :active {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: rgb(195, 5, 5);
+  font-weight: 500;
+  padding: 30px;
+  transform: translateY(-5px);
+  transition: transform 0.2s ease;
+  text-decoration: underline;
+}
+
+body {
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+body nav {
+  padding: 2rem;
+  background-image: url("../img/bannerOnepiece.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 20%;
+  opacity: 0.8;
+  display: flex;
+  align-items: flex-end;
+}
+body nav .logo {
+  height: 150px;
+}
+body nav .logo:hover, body nav .logo :active {
+  opacity: 0.75;
+}
+body nav .menu {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body nav .menu .submenu {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 30px;
+}
+body nav .menu .submenu:hover, body nav .menu .submenu :active {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: rgb(195, 5, 5);
+  font-weight: 500;
+  padding: 30px;
+  transform: translateY(-5px);
+  transition: transform 0.2s ease;
+}
+body nav .menu .submenuContainer {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  height: 60px;
+  background-color: rgba(80, 34, 116, 0.7333333333);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+  body nav .menu .submenuContainer {
+    display: inline;
+    padding: 1rem;
+  }
+}
+body .encabezado {
+  padding: 1rem;
+}
+body .encabezado .encabezado__titulo h1 {
+  border-radius: 7px;
+}
+body .encabezado .encabezado__titulo {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(80, 34, 116, 0.7333333333);
+}
+body .link {
+  font-family: "Roboto" sans-serif;
+  font-size: large;
+  background-color: rgba(80, 34, 116, 0.7333333333);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 7px;
+  position: absolute;
+  bottom: 1px;
+  left: 3px;
+}
+body .carousel {
+  display: flex;
+  width: 600px;
+  height: 640px;
+  padding: 2rem;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+body p {
+  background-color: white;
+}
+body img {
+  position: relative;
+}
+
+.conteiner__main {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+  .conteiner__main {
+    display: inline;
+    padding: 2rem;
+  }
+}
+
+.contenedor__lista {
+  display: flex;
+  background-color: white;
+}
+.contenedor__lista .lista {
+  flex-wrap: wrap;
+}
+.contenedor__lista .item__lista {
+  padding: 1rem;
+  display: block;
+}
+
+@media screen and (min-width: 850px) {
+  .carousel {
+    display: block;
+  }
+}
+@media screen and (max-width: 850px) {
+  .submenuContainer {
+    display: block;
+  }
+}
+/* CSS CONTACTO */
+/* CSS ENVIO DE FORMULARIO */
+.form-label {
+  color: white;
+  font-size: larger;
+}
+
+.form-check-label {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
