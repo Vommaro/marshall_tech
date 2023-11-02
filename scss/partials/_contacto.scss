@@ -23,3 +23,40 @@
         transition: transform 0.2s ease;
         text-decoration: underline;
 }}
+.navbar-toggler{
+    background-color: white;
+}
+// .collapse.navbar-collapse{
+//     background-color: $maincolor;
+//     display: block;
+// }
+.contenedor__logeo{
+    .logeo{
+        height: 50px;
+        padding: 0.5rem;
+    }
+    .carrito{
+        height: 50px;
+        padding: 0.5rem;
+}
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+    .leyenda__logeo{
+        font-family: "Roboto";
+        font-size: medium;
+        background-color: transparent;
+        color: white;
+        display: inline-block
+    }
+    @include tablet{
+        .leyenda__logeo{
+            display: none;
+        }
+        .logeo{
+            top: 0;
+            // // right: 0;
+        }
+    }
+}
