@@ -109,10 +109,8 @@ body nav .submenuContainer {
   border-radius: 7px;
   display: flex;
   align-items: center;
-  width: 80%;
-  margin: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
   body nav .submenuContainer {
     text-align: center;
   }
@@ -133,7 +131,6 @@ body .encabezado .encabezado__titulo {
   background-color: rgba(80, 34, 116, 0.7333333333);
 }
 body .link {
-  display: block;
   font-family: "Roboto" sans-serif;
   font-size: large;
   background-color: rgba(80, 34, 116, 0.7333333333);
@@ -141,64 +138,44 @@ body .link {
   padding: 0.5rem;
   border-radius: 7px;
   position: absolute;
-  bottom: -20px;
-  left: 10px;
+  bottom: 1px;
+  left: 3px;
 }
 body .main {
   display: block;
 }
-body .conteiner__main {
-  align-items: center;
-}
-@media screen and (max-width: 768px) {
-  body .conteiner__main {
-    display: inline-block;
-    padding: 1rem;
-  }
-}
-body .conteiner__main .conteiner__combos {
-  flex-direction: column;
+body .main .carousel {
   display: flex;
-  border-radius: red 1px;
-}
-body .conteiner__main .combo {
-  align-items: center;
-  justify-content: space-evenly;
-  display: flex;
-  padding: 1rem;
-  border: solid red 3px;
-}
-@media screen and (max-width: 768px) {
-  body .conteiner__main .combo {
-    flex-direction: column;
-  }
-}
-body .conteiner__main .combo h3 {
-  color: white;
-  border-radius: 7px;
-  padding: 1rem;
-  display: flex;
-  background-color: rgba(80, 34, 116, 0.7333333333);
-}
-@media screen and (max-width: 768px) {
-  body .conteiner__main .combo h3 {
-    flex-direction: initial;
-  }
-}
-body .conteiner__main img {
-  padding: 1.5rem;
-}
-body .conteiner__main .contenedor__lista {
+  width: 600px;
+  height: 640px;
+  padding: 2rem;
+  justify-items: center;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  body .main .carousel {
+    height: 400px;
+    display: none;
+  }
+}
+body .main .conteiner__main {
   display: flex;
-  position: relative;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body .main .conteiner__main {
+    display: inline;
+    padding: 2rem;
+  }
+}
+body .main .conteiner__main .contenedor__lista {
+  display: flex;
   background-color: white;
 }
-body .conteiner__main .contenedor__lista .lista {
+body .main .conteiner__main .contenedor__lista .lista {
   flex-wrap: wrap;
-  align-self: center;
 }
-body .conteiner__main .contenedor__lista .item__lista {
+body .main .conteiner__main .contenedor__lista .item__lista {
   padding: 1rem;
   display: block;
 }

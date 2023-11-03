@@ -52,7 +52,9 @@ body{
                 border-radius: 7px;
                 display: flex;
                 align-items: center;
-                @include mobile{
+                width: 80%;
+                margin: 0;
+                @include tablet{
                     text-align: center;
                     // background-color:transparent;
                     }
@@ -73,6 +75,7 @@ body{
             background-color: $maincolor;
         }}
     .link{
+        display: block;
         font-family: "Roboto" sans-serif;
         font-size: large;
         background-color:$maincolor;
@@ -80,43 +83,63 @@ body{
         padding: .5rem;
         border-radius: 7px;
         position: absolute;
-        bottom: 1px;
-        left: 3px;
+        bottom: -20px;
+        left: 10px;
     }
     .main{
         display: block;
-
-        .carousel{
-            display: flex;
-            width: 600px;
-            height: 640px;
-            padding: 2rem;
-            justify-items: center;
-            flex-wrap: wrap;
-            @include tablet{
-                    height: 400px;
-                    display: none;
-                    }
         }
         .conteiner__main{
-            display: flex;
+            // display: flex;
             align-items: center;
             @include tablet{
-                display: inline;
-                padding: 2rem;
+                display: inline-block;
+                padding: 1rem;
+            }
+            .conteiner__combos{
+                flex-direction: column;
+                display: flex;
+                border-radius: red 1px;
+            }
+            .combo{
+                align-items: center;
+                justify-content: space-evenly;
+                display: flex;
+                padding: 1rem;
+                border: solid red 3px;
+                @include tablet{
+                    flex-direction: column;
+                }
+                h3{
+                    color: white;
+                    border-radius: 7px;
+                    padding: 1rem;
+                    display: flex;
+                    background-color: $maincolor;
+                    @include tablet{
+                        flex-direction: initial;
+                    }
+                }
+            }
+            img{
+                padding: 1.5rem;
             }
             .contenedor__lista{
+                flex-wrap: wrap;
                 display: flex;
+                position: relative;
                 background-color: white;
                     .lista{
                         flex-wrap: wrap;
+                        
+                        align-self: center;
                 }
                     .item__lista{
                         padding: 1rem;
                         display: block;
-                }}}
+                }}
+        }
     }
-}
 /* CSS CONTACTO */
     /* CSS ENVIO DE FORMULARIO */
     .form-label{

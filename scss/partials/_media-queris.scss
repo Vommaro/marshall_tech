@@ -8,3 +8,9 @@
         @content;
     }
 }
+@mixin cajita{
+    .link:hover{
+        @content;
+    }
+
+}
