@@ -3,6 +3,8 @@
 @import "./partials/variables";
 @import "./partials/reset";
 @import "./partials/contacto";
+@import "./partials/servicios";
+@import "./partials/footer";
 body{
     p{
         background-color: white;
@@ -20,16 +22,13 @@ body{
         align-items: flex-end;
 
         .logo{
-            height: 150px;
+            max-height: 150px;
+            @include mobile{
+                display: none;
+            }
             &:hover,:active{
                 opacity: 0.75;
             }}
-            // .menu {
-            //     margin: auto;
-            //     width: 100%;
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;}
             .submenu{
                 font-family: 'Nunito', sans-serif;
                 font-size: 20px;
@@ -48,47 +47,79 @@ body{
             .submenuContainer{
                 box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
                 height: 60px;
-                background-color: $maincolor;
+                // background-color: $maincolor;
                 border-radius: 7px;
                 display: flex;
-                align-items: center;
-                width: 80%;
-                margin: 0;
+                position: relative;
+                width: 75%;
                 @include tablet{
-                    text-align: center;
-                    // background-color:transparent;
+                    width: 65%;
+                    justify-content: space-evenly;
+                    justify-items: auto;
+                    // background-color: $maincolor;
+                    }
+                    @include mobile{
+                        justify-items: auto;
+                        justify-content: space-evenly;
+                        background-color: none;
+                        left: 0;
+                    }
+                    .burger{
+                        @include tablet{
+                        position: relative;
+                        // background-color: $maincolor;
+                        }
+                        @include mobile{
+                            background-color: transparent;
+                            left: 0;
+                        }
+                    
+                    }
                     }
                 }
             }
     .encabezado{
-        padding: 1rem;
-        .encabezado__titulo h1{
-            border-radius: 7px;
-            display: block;
-        }
+        // padding: 1rem;
+        display: flex;
+        max-width: 100%;
+        margin: 1rem;
+        justify-content: center;
+        border: solid white 2px;
+        flex-direction: column;
+        align-items: stretch;
+
         .encabezado__titulo{
-            background-color: black;
             color: white;
             font-weight: 500;
             font-size: 30px;
             text-align: center;
             background-color: $maincolor;
+            max-width: 100%;
         }}
+        .encabezado__titulo2{
+            color: white;
+            font-weight: 500;
+            font-size: 30px;
+            text-align: center;
+            background-color: $maincolor;
+            max-width: 100%;
+            margin-bottom: 0;
+        }
     .link{
         display: block;
         font-family: "Roboto" sans-serif;
         font-size: large;
         background-color:$maincolor;
         color: white;
-        padding: .5rem;
+        padding: 0.25rem;
         border-radius: 7px;
         position: absolute;
-        bottom: -20px;
+        bottom: -30px;
         left: 10px;
+        margin: 1rem;
     }
     .main{
         display: block;
-        }
         .conteiner__main{
             // display: flex;
             align-items: center;
@@ -99,7 +130,7 @@ body{
             .conteiner__combos{
                 flex-direction: column;
                 display: flex;
-                border-radius: red 1px;
+                // border-radius: red 1px;
             }
             .combo{
                 align-items: center;
@@ -114,32 +145,51 @@ body{
                     color: white;
                     border-radius: 7px;
                     padding: 1rem;
+                    margin: auto;
                     display: flex;
                     background-color: $maincolor;
                     @include tablet{
-                        flex-direction: initial;
+                        order: 1;
                     }
                 }
-            }
-            img{
-                padding: 1.5rem;
+                img{
+                    border: solid $maincolor 4px;
+                    display: none;
+                    // padding: 1.5rem;
+                    max-width: 540px;
+                    @include tablet{
+                        padding: 0;
+                        order: 2;
+                        max-width: 400px;
+    
+                    }
+                }
             }
             .contenedor__lista{
                 flex-wrap: wrap;
                 display: flex;
                 position: relative;
                 background-color: white;
+                border: solid $maincolor 4px;
+                // padding: 1rem;
                     .lista{
                         flex-wrap: wrap;
-                        
                         align-self: center;
                 }
                     .item__lista{
                         padding: 1rem;
-                        display: block;
-                }}
+                        text-decoration: none;
+                        font-family: "Roboto", sans-serif;
+                        font-size: 20px;
+                        // display: block;
+                }
+                @include tablet{
+                    order: 3;
+                }
+            }
         }
     }
+    
 /* CSS CONTACTO */
     /* CSS ENVIO DE FORMULARIO */
     .form-label{
