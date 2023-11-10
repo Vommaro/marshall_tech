@@ -1,0 +1,90 @@
+nav {
+    padding: 2rem;
+    background-image: url("../img/bannerOnepiece.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 20%;
+    opacity: 0.8;
+    display: flex;
+    align-items: flex-end;
+
+    .logo{
+        max-height: 150px;
+        @include mobile{
+            display: none;
+        }
+        &:hover,:active{
+            opacity: 0.75;
+        }}
+        .logo{
+            @include tablet{
+                display: none;
+        } }
+
+
+        .cont__menu{
+            background-color: $maincolor;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+            border-radius: 7px;
+            display: flex;
+            position: relative;
+            width: 90%;
+            justify-content: space-between;
+        
+            .navbar-brand{
+                font-size: 25px;
+                color: rgb(255, 255, 255);
+                font-family: 'Noto Serif JP', serif; ;
+                padding: 0.5rem;
+                @include tablet{
+                    padding: 0;
+                }
+            }
+            .contenedor__logeo__tb{
+                display: none;
+                @include tablet {
+                    display: block;
+                }
+                .logeo{
+                    height: 50px;
+                    padding: 0.5rem;
+                }
+                .carrito{
+                    height: 50px;
+                    padding: 0.5rem;
+                        }
+                &:hover{
+                    transform: scale(1.1);
+                        }
+                
+                .leyenda__logeo{
+                    font-family: "Roboto";
+                    font-size: medium;
+                    background-color: transparent;
+                    color: white;
+                    display: inline-block;
+            
+                    @include mobile{
+                        display: none;
+                    }}}
+
+                .submenu__link{
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 20px;
+                    color:rgb(255, 255, 255);
+                    font-weight: 500;
+                    padding: 30px;
+                    &:hover,:active{
+                        font-family: 'Nunito', sans-serif;
+                        font-size: 20px;
+                        color:rgb(195, 5, 5);
+                        font-weight: 500;
+                        padding: 30px;
+                        transform: translateY(-5px);
+                        transition: transform 0.2s ease;
+                    }}}
+
+                .navbar-nav{
+                gap: 2rem;
+                margin: 0.5rem;
+                }}
