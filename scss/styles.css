@@ -295,9 +295,11 @@ hr {
 }
 .conteiner_contacto .titulos {
   color: white;
-  background-color: rgb(221, 10, 10);
+  background-color: transparent;
   font-family: "Roboto", sans-serif;
-  font-size: 25px;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: solid yellow 1px;
 }
 .conteiner_contacto .form__contac {
   flex-grow: 1;
