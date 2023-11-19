@@ -10,6 +10,7 @@ nav {
 
     .logo{
         max-height: 150px;
+        overflow: hidden;
         @include mobile{
             display: none;
         }
@@ -44,14 +45,20 @@ nav {
                 display: none;
                 @include tablet {
                     display: block;
+                    padding: 1rem; 
+                    right: 0;
                 }
                 .logeo{
                     height: 50px;
                     padding: 0.5rem;
+                    border-radius: 50%;
+                    overflow: hidden;
                 }
                 .carrito{
                     height: 50px;
                     padding: 0.5rem;
+                    border-radius: 50%;
+                    overflow: hidden;
                         }
                 &:hover{
                     transform: scale(1.1);
@@ -67,7 +74,45 @@ nav {
                     @include mobile{
                         display: none;
                     }}}
-
+                    .navbar-toggler{
+                        background-color: rgba(255, 255, 255, 0.733);
+                    }
+                    .contenedor__logeo{
+                        display: flex;
+                        align-items: center;
+                        @include tablet{
+                            display: none;
+                        }
+                        .logeo{
+                            height: 50px;
+                            padding: 0.5rem;
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+                        .carrito{
+                            height: 50px;
+                            padding: 0.5rem;
+                            border-radius: 50%;
+                            overflow: hidden;        
+                    }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        
+                        .leyenda__logeo{
+                            font-family: "Roboto", sans-serif;
+                            font-size: 18px;
+                            background-color: transparent;
+                            color: white;
+                            margin-bottom: 0;
+                            text-align: center;
+                    
+                            @include mobile{
+                                display: none;
+                            }
+                            }
+                        }
+                    
                 .submenu__link{
                     font-family: 'Nunito', sans-serif;
                     font-size: 20px;

@@ -111,10 +111,6 @@
   color: rgba(80, 34, 116, 0.7333333333);
 }
 
-.conteiner__main {
-  flex-wrap: wrap;
-  display: flex;
-}
 .conteiner__main .conteiner__lista {
   flex-wrap: wrap;
   display: flex;
@@ -123,12 +119,6 @@
   align-content: flex-start;
   background-color: black;
   border: solid rgba(80, 34, 116, 0.7333333333) 4px;
-}
-.conteiner__main .conteiner__lista .text__filtros {
-  color: white;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: black;
 }
 .conteiner__main .conteiner__lista .lista__filtros {
   flex-wrap: wrap;
@@ -472,6 +462,9 @@ hr {
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
+}
+body p {
+  background-color: white;
 }
 
 .encabezado {

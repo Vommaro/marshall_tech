@@ -1,11 +1,45 @@
-.cont__product{
-    // width: 100vh;
+.conteiner__main{
+    flex-wrap: wrap;
+    display: flex;
+    
 
-    .subcont__product{
-        display: inline-flex;
-    }
+.conteiner__lista{
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+align-items: center;
+align-content: flex-start;
+// position: relative;
+background-color: black;
+border: solid $maincolor 4px;
 
+.text__filtros{
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: black;
 
+}
 
+    .lista__filtros{
+        flex-wrap: wrap;
+        align-self: center;
+}
+    .item__lista{
+        color: white;
+        padding: 1rem;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+}
+@include tablet{
+    order: 3;
+}
+}
+
+.conteiner__item{
+    display: flex;
+
+}
 
 }

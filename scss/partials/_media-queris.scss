@@ -8,3 +8,8 @@
         @content;
     }
 }
+@mixin move{
+    @media screen and (max-width: 1080px){
+        @content;
+    }
+}
