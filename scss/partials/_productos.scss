@@ -1,45 +1,163 @@
-.conteiner__main{
-    flex-wrap: wrap;
-    display: flex;
+.main{
+.main__productos{
+    position: relative;
+    border: solid $maincolor 3px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+    @include tablet{
+        grid-template-columns: 1fr;
+    }
     
 
-.conteiner__lista{
-flex-wrap: wrap;
-display: flex;
-flex-direction: column;
-align-items: center;
-align-content: flex-start;
-// position: relative;
-background-color: black;
-border: solid $maincolor 4px;
-
-.text__filtros{
-    color: white;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: black;
-
-}
-
-    .lista__filtros{
+    .conteiner__lista2{
+        // position: absolute;
+        // top: 0;
+        margin: 1rem;
+        max-width: 250px;
         flex-wrap: wrap;
-        align-self: center;
-}
-    .item__lista{
-        color: white;
-        padding: 1rem;
-        text-decoration: none;
-        font-family: "Roboto", sans-serif;
-        font-size: 20px;
-}
-@include tablet{
-    order: 3;
-}
-}
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: space-around;
+        background-color:black;
+        border: solid $maincolor 4px;
+        
+        .text__filtros{
+            color: white;
+            font-size: 16px;
+            font-family: "roboto", sans-serif;
+            padding: .5rem;
+            border: solid $maincolor 1px;
+            margin: 1.5rem;
+            border-radius: 7px;
+            text-align: center;
+            &:hover{
+                background-color: $maincolor;
+                transform: scale(1.1);
+                font-size: 20px;
+            }
+        
+        }
+        
+            .lista__filtros{
+                flex-wrap: wrap;
+                align-self: center;
+        }
+            .item__lista{
+                color: white;
+                padding: 1rem;
+                text-decoration: none;
+                font-family: "Roboto", sans-serif;
+                font-size: 30px;
+        }
+            @include tablet{
+                display: none;
+            }
 
-.conteiner__item{
+            .button__filtros{
+                margin: 1rem;
+                background-color: transparent;
+                border: solid $maincolor 2px;
+                &:hover{
+                    background-color: $maincolor;
+                    border: solid white 2px;
+                                    }
+            }
+        }
+        
+
+.conteiner__productos{
+    flex-wrap: wrap;
     display: flex;
+    padding: 0.5rem;
+    margin: 1rem;
+    justify-content: space-between;
+    
+.conteiner__item{
+    flex-grow: 1;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid $maincolor 3px;
+    border-radius: 7px;
+    &:hover{
+        border: solid white 3px;
+    }
 
-}
 
+    .img__produc{
+        border-radius: 7px;
+        max-width: 250px;
+        max-height: 300px;
+        background-color: white;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include tablet{
+            max-width: auto;
+            max-height: auto;            
+        }
+    }
+
+    .conteiner__text__combo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+
+        .separador{
+            position: relative;
+            display: flex;
+
+            .button2{
+                position: absolute;
+                bottom: 0px;
+                right: 10px;   
+                @include tablet{
+                    bottom: -30px;
+                    right: -30px;
+                }
+                @include mobile{
+                    height: 40px;
+                    width: 180px;
+
+                
+                }
+        }
+        }
+    }
+
+    .descripcion__producto{
+        color: white;
+        font-family: "Roboto" sans-serif;
+        text-align: justify;
+        padding: 1rem;
+        font-size: 20px;
+        @include mobile{
+            font-size: 18px;
+        }
+    }
+
+    .precio__producto{
+        color: white;
+        font-size: 25px;
+        padding: .5rem;
+        margin: 1rem;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+    }}}
+
+
+    .puntero{
+        position: fixed;
+        left: 10px;
+        bottom: 155px;
+        z-index: 1;
+        color: white;
+    }
 }

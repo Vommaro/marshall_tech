@@ -111,35 +111,6 @@
   color: rgba(80, 34, 116, 0.7333333333);
 }
 
-.conteiner__main .conteiner__lista {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: flex-start;
-  background-color: black;
-  border: solid rgba(80, 34, 116, 0.7333333333) 4px;
-}
-.conteiner__main .conteiner__lista .lista__filtros {
-  flex-wrap: wrap;
-  align-self: center;
-}
-.conteiner__main .conteiner__lista .item__lista {
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-}
-@media screen and (max-width: 992px) {
-  .conteiner__main .conteiner__lista {
-    order: 3;
-  }
-}
-.conteiner__main .conteiner__item {
-  display: flex;
-}
-
 nav {
   padding: 2rem;
   background-image: url("../img/bannerOnepiece.jpg");
@@ -459,12 +430,104 @@ hr {
   background-color: #005ce6;
 }
 
+.main__productos {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+}
+@media screen and (max-width: 992px) {
+  .main__productos {
+    grid-template-columns: 1fr;
+  }
+}
+.main__productos .conteiner__lista2 {
+  margin: 1rem;
+  max-width: 250px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-around;
+  background-color: black;
+  border: solid rgba(80, 34, 116, 0.7333333333) 4px;
+}
+.main__productos .conteiner__lista2 .text__filtros {
+  color: white;
+  padding: 0.5rem;
+  background-color: black;
+}
+.main__productos .conteiner__lista2 .lista__filtros {
+  flex-wrap: wrap;
+  align-self: center;
+}
+.main__productos .conteiner__lista2 .item__lista {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+@media screen and (max-width: 992px) {
+  .main__productos .conteiner__lista2 {
+    display: none;
+  }
+}
+.main__productos .conteiner__productos {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0.5rem;
+  margin: 1rem;
+  justify-content: space-between;
+}
+.main__productos .conteiner__productos .conteiner__item {
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid rgba(80, 34, 116, 0.7333333333) 3px;
+}
+.main__productos .conteiner__productos .conteiner__item .img__produc {
+  max-width: 250px;
+  max-height: 300px;
+  background-color: white;
+}
+.main__productos .conteiner__productos .conteiner__item .conteiner__text__combo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.main__productos .conteiner__productos .conteiner__item .conteiner__text__combo .separador .button.button2 {
+  top: 0;
+  right: 0;
+}
+.main__productos .conteiner__productos .conteiner__item .descripcion__producto {
+  color: white;
+  text-align: justify;
+  padding: 1rem;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .main__productos .conteiner__productos .conteiner__item .descripcion__producto {
+    font-size: 18px;
+  }
+}
+.main__productos .conteiner__productos .conteiner__item .precio__producto {
+  color: white;
+  font-size: 25px;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .main__productos .conteiner__productos .conteiner__item {
+    flex-direction: column;
+  }
+}
+
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
-}
-body p {
-  background-color: white;
 }
 
 .encabezado {
@@ -477,7 +540,7 @@ body p {
   align-items: stretch;
 }
 .encabezado .encabezado__titulo {
-  color: white;
+  color: pink;
   font-weight: 500;
   font-size: 30px;
   text-align: center;
@@ -540,6 +603,7 @@ body p {
   position: absolute;
   bottom: -32px;
   right: -20px;
+  left: 50px;
 }
 
 .button span {
@@ -569,9 +633,6 @@ body p {
   font-size: 0.1rem;
 }
 
-.main {
-  display: block;
-}
 .main .conteiner__main {
   align-items: center;
 }

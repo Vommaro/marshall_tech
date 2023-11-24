@@ -1,7 +1,8 @@
 @import "./variables";
 
 .conteiner__tarjetitas{
-    border: solid rgb(58, 228, 7) 3px;
+    position: relative;
+    border: solid $maincolor 3px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -47,29 +48,99 @@
                 .tarjetitas1{
                     grid-column: 1/5;
                     grid-row: 1/2;
+                    z-index: 1;
                 }
                 .tarjetitas2{
                     grid-column: 5/9;
                     grid-row: 2/3;
+                    z-index: 1;
                 }
                 .tarjetitas3{
-                    grid-column: 1/5;
+                    grid-column: 2/6;
                     grid-row: 3/4;
+                    z-index: 1;
                     h5{
                         text-align: center;
                     }
                     }
                 .tarjetitas4{
-                    grid-column: 5/9;
+                    grid-column: 4/8;
                     grid-row: 4/4;
+                    z-index: 1;
             }
         .titulo__tarjetitas{
             background-color: gray;
             border-radius: 7px;
         }
-    .separador{
-        grid-column: 1fr;
-    }
-    }
+.contenedor__videos{
+        display: flex;
+        @include tablet{
+            flex-direction: column;
+        }
 
+
+        .video1{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include tablet{
+                display: none;
+            }
+                }
+        .video2{
+            position: absolute;
+            top: 150px;
+            left: 0;
+            
+            @include tablet{
+                display: none;
+            }
+                }
+        .video3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @include tablet{
+                display: none;
+            }
+        }
+        .video4{
+            position: absolute;
+            top: 0;
+            right: 35%;
+
+            @include tablet{
+                display: none;
+            }
+        }
+        .video5{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include tablet{
+                display: none;
+            }
+        }
+
+
+            
+    
+    
+    
+    }
+        // .superpuesto{
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // width: 560px;
+        // height: 315px;
+        // background-color: transparent;
+        // pointer-events: none;
+        // }
+
+
+            }
 

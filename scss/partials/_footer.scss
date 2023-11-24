@@ -1,28 +1,36 @@
-
-.redes{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    gap: 3rem;
-
-    .img__redes{
-        max-width: 50px;
-    }
-}
 .footer{
-    background-color: rgb(168, 160, 160)
-}
-.card-text{
-    background-color: $maincolor;
-    color: white;
-    font-size: 18px;
-}
-.card-header{
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-}
-.mail{
-    font-size: 20px;
-    text-decoration: double;
-    color: $maincolor;
-}
+    .redes{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 3rem;
+
+        .img__redes{
+            max-width: 50px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .footer{
+        background-color: rgb(168, 160, 160);   
+    }
+    .card-text{
+        background-color: $maincolor;
+        color: white;
+        font-size: 18px;
+        &:hover{
+            background-color: white;
+            color: $maincolor;
+        }
+    }
+    .card-header{
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+    }
+    .mail{
+        font-size: 20px;
+        text-decoration: double;
+        color: $maincolor;
+    }
+    }

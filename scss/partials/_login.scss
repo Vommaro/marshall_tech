@@ -1,3 +1,6 @@
+    .main__form{
+      border: solid $maincolor 3px;
+    }
     .form-check{
         margin: 1rem;
     }
@@ -18,16 +21,40 @@
     }
     .form{
     margin: .5rem;
-    border: solid #fc4b08 3px;
     }
     hr{
     margin: 0.5rem;
     }
 
+    .cont__enviar__form{
+      display: flex;
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+
+      .button__filtros{
+        display: flex;
+        background-color: transparent;
+        border: solid $maincolor 2px;
+        align-items: center;
+        right: 50%;
+        padding: 1rem;
+        margin: 1rem;
+        &:hover{
+            background-color: $maincolor;
+            border: solid white 2px;
+                            }
+
+    }
+
+    }
+
     // CSS para la parte de Contactanos
 
     .conteiner_contacto{
-        border: solid yellow 3px;
+        border: solid $maincolor 3px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -42,14 +69,14 @@
             font-family: "Roboto", sans-serif;
             font-size: 28px;
             text-align: center;
-            border-bottom: solid yellow 1px;
+            border-bottom: solid $maincolor 1px;
             
         }
 
         .form__contac{
             flex-grow: 1;
             margin: 1rem;
-            border: solid yellow 3px;
+            border: solid $maincolor 3px;
             justify-content: center;
             padding: 0.5rem;
 
@@ -57,21 +84,26 @@
             .btn__enviar{
                 margin: 0.5rem;
                 display: inline-block;
+                background-color: transparent;
+                border: solid $maincolor 2px;
+                &:hover{
+                  background-color: $maincolor;
+                  border: solid white 2px;
+                                  }
             }
             .tyc{
-                font-size: 12px;
+                font-size: 9px;
             }
         }
 
         .cont__mapa{
-            // display: block;
             margin: 2rem;
             padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            border: solid yellow 3px;
-            @include tablet{
-                // display: none;
-            }
+            align-items: center;
+            border: solid $maincolor 3px;
             .mapa{
                 @include tablet{
                     height: 350px;
@@ -90,6 +122,7 @@
     }
 
     //CSS para Inicio Sesion
+
     .redirect{
         z-index: 1;
     }
@@ -165,3 +198,64 @@
       .form button:hover {
         background-color: #005ce6;
       }
+
+      .main__inicio__sesion{
+        display: flex;
+        justify-content: center;
+      }
+  
+
+      .inicio__sesion{
+        align-items: center;
+        background-color: black;
+        border: solid $maincolor 3px;
+
+        .title{
+          color: white;
+          font-family: 'Noto Serif JP', serif;
+          font-size: 30px;
+        }
+      }
+
+
+
+          // CSS para la page de carga fallida
+
+    .cont__carga__fallida{
+      display: flex;
+      position: relative;
+      background-color: black;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      border: $maincolor solid 3px;
+      flex-direction: column;
+
+      .descripcion__producto{
+          display: flex;
+          font-size: 30px;
+          padding: 1rem;
+          border-radius: 7px;
+          font-family: "nunito";
+          color: black;
+          top: 50vh;
+          right: 50vh;
+          text-align: center;
+          background-color: white;
+      }
+      .button__filtros{
+          display: flex;
+          position: absolute;
+          background-color: transparent;
+          border: solid $maincolor 2px;
+          align-items: center;
+          right: 50%;
+          padding: 1rem;
+          margin: 1rem;
+          &:hover{
+              background-color: $maincolor;
+              border: solid white 2px;
+                              }
+
+      }
+  }

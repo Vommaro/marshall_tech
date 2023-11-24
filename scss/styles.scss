@@ -4,9 +4,9 @@
 @import "./partials/reset";
 @import "./partials/servicios";
 @import "./partials/footer";
-@import "./partials/productos";
 @import "./partials/header";
 @import "./partials/login";
+@import "./partials/productos";;
 body{
     background-color: black;
     font-family: "Roboto", sans-serif;
@@ -39,17 +39,22 @@ body{
             margin-bottom: 0;
         }
     .link{
-        display: block;
         font-family: "Roboto" sans-serif;
-        font-size: large;
+        font-size: 16px;
         background-color: white;
         color: black;
-        padding: 0.25rem;
+        padding: 0.5rem;
         border-radius: 7px;
+        border: solid $maincolor 2px;
         position: absolute;
-        bottom: -30px;
+        bottom: -40px;
         left: 10px;
         margin: 1rem;
+        &:hover{
+            background-color: black;
+            color: white;
+
+        }
         @include move{
             left: -80px;
         }
@@ -57,7 +62,9 @@ body{
             left: 10px;    
         }
         @include mobile{
-            display: non;
+            transform: rotate(-90deg);
+            left: -80px;
+            bottom: 20px;
         }
     }
 
@@ -109,7 +116,6 @@ body{
 
 
     .main{
-        display: block;
         .conteiner__main{
             align-items: center;
             @include tablet{
@@ -125,7 +131,7 @@ body{
                 justify-content: space-evenly;
                 display: flex;
                 padding: 1rem;
-                border: solid red 3px;
+                border: solid $maincolor 3px;
                 @include tablet{
                     flex-direction: column;
                 }
@@ -176,6 +182,7 @@ body{
                     }}}
 
             .contenedor__lista{
+                margin-bottom:  2rem;
                 flex-wrap: wrap;
                 display: flex;
                 position: relative;
@@ -197,91 +204,4 @@ body{
                 }
             }
         }
-    }
-    // .card {
-    //     width: 190px;
-    //     height: 254px;
-    //     background: #171717;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     box-shadow: 0px 0px 3px 1px #00000088;
-    //     cursor: pointer;
-    //     overflow: hidden;
-    //     position: relative;
-    //   }
-      
-    //   .card .content {
-    //     border-radius: 5px;
-    //     background: #171717;
-    //     width: 186px;
-    //     height: 250px;
-    //     z-index: 1;
-    //     padding: 20px;
-    //     color: white;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-    //     align-items: center;
-    //   }
-      
-    //   .content::before {
-    //     opacity: 0;
-    //     transition: opacity 300ms;
-    //     content: " ";
-    //     display: block;
-    //     background: white;
-    //     width: 50px;
-    //     height: 50px;
-    //     position: absolute;
-    //     filter: blur(50px);
-    //   }
-      
-    //   .card:hover .content::before {
-    //     opacity: 1;
-    //   }
-      
-    //   .card::before {
-    //     opacity: 0;
-    //     content: " ";
-    //     position: absolute;
-    //     display: block;
-    //     width: 120px;
-    //     height: 360px;
-    //     background: linear-gradient(
-    //       90deg,
-    //       transparent,
-    //       #ff2288,
-    //       #387ef0,
-    //       transparent
-    //     );
-    //     transition: opacity 300ms;
-    //     animation: rotation_9018 3000ms infinite linear;
-    //     animation-play-state: paused;
-    //   }
-      
-    //   .card:hover::before {
-    //     opacity: 1;
-    //     animation-play-state: running;
-    //   }
-      
-    //   .card::after {
-    //     position: absolute;
-    //     content: " ";
-    //     display: block;
-    //     width: 190px;
-    //     height: 254px;
-    //     background: #17171733;
-    //     backdrop-filter: blur(50px);
-    //   }
-      
-    //   @keyframes rotation_9018 {
-    //     0% {
-    //       transform: rotate(0deg);
-    //     }
-      
-    //     100% {
-    //       transform: rotate(360deg);
-    //     }
-    //   }
-      
+    }    
