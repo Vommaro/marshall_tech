@@ -56,7 +56,7 @@
                     z-index: 1;
                 }
                 .tarjetitas3{
-                    grid-column: 2/6;
+                    grid-column: 1/5;
                     grid-row: 3/4;
                     z-index: 1;
                     h5{
@@ -64,7 +64,7 @@
                     }
                     }
                 .tarjetitas4{
-                    grid-column: 4/8;
+                    grid-column: 5/9;
                     grid-row: 4/4;
                     z-index: 1;
             }
@@ -72,74 +72,6 @@
             background-color: gray;
             border-radius: 7px;
         }
-.contenedor__videos{
-        display: flex;
-        @include tablet{
-            flex-direction: column;
-        }
-
-
-        .video1{
-            position: absolute;
-            top: 0;
-            right: 0;
-
-            @include tablet{
-                display: none;
-            }
-                }
-        .video2{
-            position: absolute;
-            top: 150px;
-            left: 0;
-            
-            @include tablet{
-                display: none;
-            }
-                }
-        .video3{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-
-            @include tablet{
-                display: none;
-            }
-        }
-        .video4{
-            position: absolute;
-            top: 0;
-            right: 35%;
-
-            @include tablet{
-                display: none;
-            }
-        }
-        .video5{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            @include tablet{
-                display: none;
-            }
-        }
-
-
-            
-    
-    
-    
-    }
-        // .superpuesto{
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // width: 560px;
-        // height: 315px;
-        // background-color: transparent;
-        // pointer-events: none;
-        // }
 
 
             }

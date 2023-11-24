@@ -209,6 +209,8 @@
         align-items: center;
         background-color: black;
         border: solid $maincolor 3px;
+        margin: 1.5rem;
+        z-index: 1;
 
         .title{
           color: white;
@@ -216,6 +218,77 @@
           font-size: 30px;
         }
       }
+
+      .contenedor__videos{
+        display: flex;
+        @include tablet{
+            flex-direction: column;
+        }
+
+
+        .video1{
+            position: absolute;
+            top: 300px;
+            right: 0;
+
+            @include tablet{
+                display: none;
+            }
+                }
+        .video2{
+            position: absolute;
+            top: 300px;
+            left: 0;
+            
+            @include tablet{
+                display: none;
+            }
+                }
+
+                .video3{
+                  position: absolute;
+                  top: 300px;
+                  right: 0;
+                  display: none;
+
+                  @include tablet{
+                      display: none;
+                    }
+                    @include mobile{
+                      display: none;
+                    }
+
+                      }
+
+              .video4{
+                  position: absolute;
+                  top: 300px;
+                  left: 0;
+                  display: none;
+                  
+                  @include tablet{
+                      display: none;
+                  }
+                  @include mobile{
+                    display: none;
+                  }
+
+                      }
+      
+    }
+        // .superpuesto{
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // width: 560px;
+        // height: 315px;
+        // background-color: transparent;
+        // pointer-events: none;
+        // }
+
+
+
+
 
 
 
@@ -232,6 +305,7 @@
       flex-direction: column;
 
       .descripcion__producto{
+        margin: 1.5rem;
           display: flex;
           font-size: 30px;
           padding: 1rem;
