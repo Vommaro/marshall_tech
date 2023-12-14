@@ -7,9 +7,20 @@
 * a {
   text-decoration: none;
 }
+.btn.btn-primary.btn__registro.button__filtros{
+  background-color: transparent;
+  margin: .5rem;
+  margin-bottom: 1rem;
+  border: solid #502274bb 1px;
+  padding: .5rem;
+}
+.btn.btn-primary.btn__registro.button__filtros:hover{
+background-color: #502274bb;
+border: solid white 1px;
 
+}
 .conteiner__tarjetitas {
-  border: solid rgb(58, 228, 7) 3px;
+  border: solid #502274bb 3px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -75,10 +86,6 @@
   background-color: gray;
   border-radius: 7px;
 }
-.conteiner__tarjetitas .separador {
-  grid-column: 1fr;
-}
-
 .redes {
   align-items: center;
   justify-content: center;
@@ -280,7 +287,7 @@ nav .navbar-nav {
 
 .form {
   margin: 0.5rem;
-  border: solid #fc4b08 3px;
+  border: solid #502274bb 3px;
 }
 
 hr {
@@ -288,7 +295,7 @@ hr {
 }
 
 .conteiner_contacto {
-  border: solid yellow 3px;
+  border: solid #502274bb 3px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -304,12 +311,12 @@ hr {
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   text-align: center;
-  border-bottom: solid yellow 1px;
+  border-bottom: solid #502274bb 1px;
 }
 .conteiner_contacto .form__contac {
   flex-grow: 1;
   margin: 1rem;
-  border: solid yellow 3px;
+  border: solid #502274bb 3px;
   justify-content: center;
   padding: 0.5rem;
 }
@@ -324,7 +331,7 @@ hr {
   margin: 2rem;
   padding: 0.5rem;
   justify-content: center;
-  border: solid yellow 3px;
+  border: solid #502274bb 3px;
 }
 @media screen and (max-width: 992px) {
   .conteiner_contacto .cont__mapa .mapa {
@@ -498,9 +505,11 @@ hr {
   justify-content: flex-start;
   position: relative;
 }
-.main__productos .conteiner__productos .conteiner__item .conteiner__text__combo .separador .button.button2 {
-  top: 0;
-  right: 0;
+
+.separador{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .main__productos .conteiner__productos .conteiner__item .descripcion__producto {
   color: white;
@@ -540,7 +549,7 @@ body {
   align-items: stretch;
 }
 .encabezado .encabezado__titulo {
-  color: pink;
+  color: white;
   font-weight: 500;
   font-size: 30px;
   text-align: center;
@@ -559,39 +568,24 @@ body {
 }
 
 .link {
-  display: block;
   font-family: "Roboto" sans-serif;
-  font-size: large;
-  background-color: white;
-  color: black;
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: solid 1px white;
   padding: 0.25rem;
   border-radius: 7px;
   position: absolute;
   bottom: -30px;
-  left: 10px;
+  right: 10px;
   margin: 1rem;
-}
-@media screen and (max-width: 1080px) {
-  .link {
-    left: -80px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .link {
-    left: 10px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .link {
-    display: non;
-  }
 }
 
 .button {
   height: 60px;
   width: 200px;
   background-color: #ffffff;
-  border: 2px solid rgba(80, 34, 116, 0.7333333333);
+  border: 2px solid #502274bb;
   color: #000000;
   transition: 0.6s;
   font-size: 15px;
@@ -600,7 +594,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: absolute;
+  /* position: absolute; */
   bottom: -32px;
   right: -20px;
   left: 50px;
@@ -651,7 +645,7 @@ body {
   justify-content: space-evenly;
   display: flex;
   padding: 1rem;
-  border: solid red 3px;
+  border: solid #502274bb 3px;
 }
 @media screen and (max-width: 992px) {
   .main .conteiner__main .combo {
@@ -734,4 +728,17 @@ body {
   .main .conteiner__main .contenedor__lista {
     order: 3;
   }
+  .main__inicio__sesion{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .puntero{
+    color: white;
+    position: fixed;
+    bottom: 250px;
+    left: 3px;
+  }
+
 }/*# sourceMappingURL=styles.css.map */
